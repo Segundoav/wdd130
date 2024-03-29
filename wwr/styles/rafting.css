@@ -1,17 +1,15 @@
-@charset
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Skranji:wght@400;700&display=swap');
+@charset 
+@import url(https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Skranji:wght@400;700&display=swap);
 
 h1{
     font-family:'skranji', cursive;
     font-weight: 700;
+    
 }
 p{
     font-family: 'skranji', cursive;
     font-weight: 700;
-
 }
-
-
 body {
 
     font-family: var(--paragraph-font);
@@ -19,29 +17,32 @@ body {
     padding: 20px;
 }
     
-
 :root {
     --primary-color:#112a2e;
     --secondary-color:#d88e52;
     --accent1-color: #6887ee;
     --accent2-color: #e96363;
+
     
     --heading-font:skranji,serif;
     --paragraph-font:skranji,serif;
+    
 
     --nav-background-color: #e96363;
     --nav-link-color: #112a2e;
-    --nav-hover-link-color: #d88e52;
+    --nav-hover-link-color: #6887ee;
     --nav-hover-background-color: #e96363;
 }
-
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    background-color: #6887ee;
+    width: 600px;
 }
 header {
     padding: 20px;
     background-color: var(--accent1-color);
+    width: 560px;
 }
 p {
     padding: 25px;
@@ -50,21 +51,26 @@ nav {
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
     display: flex;
+    width: 560px;
 }
-
 nav a {
     display: block;
     color: var(--nav-link-color);
     text-decoration: none;
-    padding: 1rem;
+    padding: 1rem;   
 }
 
-nav a:link, nav a:visited {
-    color: var(--nav-link-color);
+.hero img  {
+
+    display: flex;
+    width: 100%;
+    height: auto;
 }
-nav a:hover {
-    color: var(--nav-hover-link-color);
-    background-color: var(--nav-background-color);
-}    
-  
-  
+
+
+
+
+
+
+
+    
