@@ -55,8 +55,7 @@
     width: 30%;
   }
   header {
-    display: block;
-    justify-content: center;
+    display: grid;
     gap: 3rem;
     
     
