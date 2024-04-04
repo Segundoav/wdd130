@@ -1,21 +1,16 @@
- @import url(https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Skranji:wght@400;700&display=swap);
+@charset
+@import url(https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Skranji:wght@400;700&display=swap);
 .hero {
     color: black;
     position: relative;
-    
-    
-    
-    
-    
+       
   }
   
   .hero img {
     display: block;
     height: auto;
     position: relative;
-    
-    
-    
+       
     
   }
   
@@ -27,8 +22,6 @@
     top: 30%;
     padding-left: 50px;
     
-    
-
   }
   article {
     position: absolute;
@@ -40,9 +33,7 @@
     margin: 10px 30px;
     margin-right: 100px;
     width: 500px;
-    
-    
-    
+   
   }
   article img {
     float: right;
@@ -57,9 +48,7 @@
   header {
     display: grid;
     gap: 3rem;
-    
-    
-    
+       
   }
 
  
@@ -68,10 +57,9 @@
     gap: 30px;
     margin-top: 60px;
     background-color: steelblue;
-    padding: 1rem;
     justify-content: left;
     align-items: center;
-    width: 570px;
+    width: 600px;
 
     
     
