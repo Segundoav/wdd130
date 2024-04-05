@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="BYU -Idaho course, question form" >
+        <meta name="author" content="Segundo Alvarez" >
+        <title>Basic HTML and CSS Quiz</title>
+        <link rel="stylesheet" href="styles/quiz.css" >
+    
+    </head>
+    <body>
+        <h1>Basic HTML and CSS Quiz</h1>
+        <form action="#" method="post">
+            <!--Question 1-->
+            <label for="q1">What is HTML for?</label>
+            <input type="text" id="q1" required >
+            <!--Question 2-->
+            <label for="q2">What is CSS for?</label>
+            <textarea id="q2" name="q2" rows="4" required></textarea>
+            <!--Question 3-->
+            <label for="q3">Select a project goal</label>
+            <select name="q3" id="q3" required>
+                <option value="" selected disabled>chosse one...</option>
+             <option value="">Web page</option>
+             <option value="">Mobile app</option>
+             <option value="">Comnputer games</option>
+          
+            </select>
+            <!--Question 4-->
+            <label for="q4">How many projects do you want to carry out?</label>
+            <input type="number" id="q4" name="q4" required >
+            <!--Send button-->
+            <div class="flex">
+                <button type="submit">Submit Quiz</button>
+            </div>
+        </form>
+    </body>
+</html>
