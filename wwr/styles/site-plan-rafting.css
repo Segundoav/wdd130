@@ -38,13 +38,14 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
+    margin right: inherit;: 100px;
 }
 header {
     padding: 20px;
     background-color: var(--accent1-color);
 }
 p {
-    padding: 25px;
+    padding: 205px;
 }
 nav {
     background-color: var(--nav-background-color);

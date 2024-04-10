@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips - Rafting Adventures</title>
+    <meta name="description" content="Explore our exciting rafting trips and adventures. Contact us to book your trip today.">
+    <link rel="stylesheet" href="/wwr/style/rafting.css">
+
+    <style>
+        /* CSS for the image slider */
+        .slider-container {
+            width: 100%;
+            height: 300px; /* Adjust height as needed */
+            overflow: hidden;
+            position: relative;
+        }
+        .slider {
+            width: 500%; /* Each slide will take 20% of the container width */
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            width: 20%; /* Each slide takes 20% of the slider width */
+            flex: 1;
+        }
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Manual navigation buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            z-index: 1;
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a id="logo_link" href="index.html">
+            <img class="logo" src="images/rafinglogo.png" alt="Rafting Site Plan"
+                 width="100"
+                 height="100">
+        </a>
+        <nav>
+            <a href="/wwr/index.html">Home</a>
+            <a href="/wwr/about.html">About Us</a>
+            <a href="/wwr/trips.html">Trips</a></a>
+            <a href="/wwr/contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+
+    <!-- Main content -->
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide"><img src="/wwr/images/rafting59_600.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="/wwr/images/rafting8_600.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="/wwr/images/rafting1_600.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="/wwr/images/rafting42_600.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="/wwr/images/rafting53_600.jpg" alt="Image 5"></div>
+            </div>
+            <div class="prev" onclick="moveSlide(-1)">❮</div>
+            <div class="next" onclick="moveSlide(1)">❯</div>
+        </div>
+            <h2>Exciting Rafting Trips and Adventures</h2>
+            <p>Explore our thrilling rafting trips and packages below.</p>
+            <button onclick="window.location.href='/wwr/contact.html'">Contact Us</button>
+        </section>
+
+        <!-- Detailed trip descriptions with photos -->
+        <section id="trip-descriptions">
+            <!-- Trip descriptions go here -->
+        </section>
+
+        <!-- Table outlining available trips -->
+        <section id="trip-table">
+            <!-- Trip table goes here -->
+        </section>
+
+        <section id="adventures">
+            <h2>Adventure Awaits You!</h2>
+            <div class="adventure-grid">
+                <figure class="rivers-card">
+                    <img class="card-img" src="images/rafting1_600.jpg" alt="River in forest">
+                    <figcaption>Rivers</figcaption>
+                </figure>
+        
+                <figure class="camping-card">
+                    <img class="card-img" src="images/rafting42_600.jpg" alt="tent in mountains">
+                    <figcaption>Emotion</figcaption>
+                </figure>
+        
+                <figure class="rapids-card">
+                    <img class="card-img" src="images/rafting53_600.jpg" alt="rafting boat">
+                    <figcaption>Rapids</figcaption>
+                </figure>
+        
+                <figure class="mountains-card">
+                    <img class="card-img" src="images/rafting59_600.jpg" alt="walking mountains">
+                    <figcaption>Fellowship</figcaption>
+                </figure>
+        
+                <figure class="rafting-card">
+                    <img class="card-img" src="images/rafting8_600.jpg" alt="rafting boat">
+                    <figcaption>Rafting</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>©️2024 🌴 Segundo Alvarez 🌴 Lima-Perú </p>
+                    <p><a href="index.html">Home </a></p>
+        <p><a href="contact.html">Contact Us</a></p>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="trips.html">Trips</a></p>
+        </div>
+
+        <div class="footer-right">
+            <div class="social">
+                <a href="https://facebook.com">
+                    <img src="images/1_Facebook_colored_svg_copy-64.webp" alt="fb icon">
+                </a>
+                <a href="https://twitter.com">
+                    <img src="images/1_Twitter3_colored_svg-64.webp" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram_icon-instagram_buttoninstegram-64.webp" alt="instagram icon">
+                </a>
+    </footer>
+    
+
+    <script>
+        let slideIndex = 1;
+        showSlide(slideIndex);
+        
+        function moveSlide(n) {
+            showSlide(slideIndex += n);
+        }
+        
+        function showSlide(n) {
+            let slides = document.querySelectorAll('.slide');
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.transform = `translateX(-${(slideIndex - 1) * 100}%)`;
+            }
+        }
+
+        // Auto-play
+        setInterval(() => {
+            moveSlide(1);
+        }, 5000); // Change slide every 5 seconds
+    </script>
+
+</body>
+</html>
