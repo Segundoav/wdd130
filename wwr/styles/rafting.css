@@ -1,0 +1,105 @@
+:root {
+    --primary-color: #3E7CB1;
+    --secondary-color: #81A4CD;
+    --background-color: #DBE4EE;
+    --text-color: #F17300;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(#DBE4EE);
+    color: var(#F17300);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(#3E7CB1);
+    padding: 1rem;
+}
+
+header img {
+    width: 100px;
+}
+
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 1rem;
+    font-size: 20px;
+    
+}
+
+
+main {
+    position: relative; /* Permite la superposición de elementos */
+    text-align: center; /* Centra el contenido dentro de main */
+}
+
+.main-image {
+    width: 100%; /* Asegura que la imagen grande ocupe el 100% del ancho */
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    top: 5%; /* Ajusta la posición del título */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 95, 115, 0.7);
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 2.5rem; /* Tamaño de fuente */
+    width: 40%;
+}
+
+article {
+    position: absolute; /* Permite que el artículo se posicione en relación a su contenedor padre */
+    display: flex; /* Permite usar flexbox para alinear el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    padding: 0.5rem; /* Espaciado interno alrededor del contenido */
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    margin-top: -150px; /* Ajusta la posición vertical del artículo */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición horizontal */
+    
+    max-width: 50%; /* Limita el ancho máximo del artículo */
+    width: 30%; /* Define el ancho del artículo */
+    margin-right: 1rem; /* Espacio a la derecha del artículo */
+    border-radius: 10px; /* Bordes redondeados */
+    flex-direction: row-reverse;
+}
+
+article img{
+    width: 90%; /* Ajusta el tamaño de la imagen */
+    max-width: 150px; /* Limita el ancho máximo */
+    height: auto; /* Mantiene la proporción */
+}
+article p {
+    font-size: 1rem; /* Reduce el tamaño del texto */
+    max-width: 50%; /* Limita el ancho del párrafo */
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(#81A4CD);
+}
+
+footer img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+footer p {
+    margin: 0;
+    color: white;
+}
