@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(#DBE4EE);
-    color: var(#F17300);
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
@@ -17,7 +17,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(#3E7CB1);
+    background-color: var(--primary-color);
     padding: 1rem;
 }
 
@@ -88,7 +88,7 @@ article p {
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: var(#81A4CD);
+    background-color: var(--primary-color);
 }
 
 footer img {
