@@ -89,13 +89,13 @@ article {
 
 article img {
     width: 90%; /* Adjusts the image size */
-    max-width: 300px; /* Limits the maximum width */
+    max-width: 150px; /* Limits the maximum width */
     height: auto; /* Maintains aspect ratio */
 }
 
 article p {
-    font-size: 2rem; /* Reduces text size */
-    width: 100%;
+    font-size: 1rem; /* Reduces text size */
+    width: 90%;
     text-align: center; /* Ensures text is centered */
 }
 
