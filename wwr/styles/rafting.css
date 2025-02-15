@@ -98,22 +98,23 @@ article p {
     width: 90%;
     text-align: center; /* Ensures text is centered */
 }
-
-.history-section {
-    padding: 20px; /* Espaciado interno para que no quede pegado a los bordes */
-    text-align: center; /* Centrar el título */
-}
-
 .history-section h2 {
     margin-bottom: 15px; /* Espaciado debajo del título */
 }
 
-.history-content {
-    display: flex; /* Activa flexbox para organizar en fila */
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    gap: 20px; /* Espacio entre los elementos */
+.history-section {
+    padding: 20px;
+    text-align: center;
 }
+
+.history-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite mejor adaptabilidad en pantallas pequeñas */
+    gap: 20px;
+}
+
 
 .history-content img {
     width: 400px; /* Ajusta el tamaño de la imagen */
