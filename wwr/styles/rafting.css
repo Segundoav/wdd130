@@ -1,3 +1,4 @@
+/* VARIABLES DE COLOR */
 :root {
     --primary-color: #3E7CB1;
     --secondary-color: #81A4CD;
@@ -5,6 +6,7 @@
     --text-color: #F17300;
 }
 
+/* ESTILO GENERAL */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
@@ -13,14 +15,14 @@ body {
     padding: 0;
 }
 
+/* HEADER */
 header {
     display: grid;
-    grid-template-columns: auto 1fr auto; /* Tres columnas bien distribuidas */
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     background-color: var(--primary-color);
     padding: 0.5rem;
-    gap: 2rem; /* Aumenta la separación entre elementos */
-    margin-right: 200px;
+    gap: 2rem;
     width: 100%;
 }
 
@@ -29,92 +31,74 @@ header img {
     margin-left: 200px;
 }
 
+
+
 nav a {
     color: black;
     text-decoration: none;
-    margin: 1rem;
     font-size: 30px;
+    margin: 1rem;
 }
 
+/* MAIN */
 main {
-    position: relative; /* Allows element overlap */
-    text-align: center; /* Centers content inside main */
-    padding-top: 0px;
+    text-align: center;
 }
 
+/* IMAGEN PRINCIPAL */
+.main-imagen-large {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+/* CONTENEDOR DE IMÁGENES */
 .image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap; /* Evita que las imágenes se vayan a otra línea */
-    gap: 15px; /* Espacio entre imágenes */
+    flex-wrap: wrap;
+    gap: 15px;
     width: 100%;
-    max-width: 1200px; /* Controla el tamaño máximo del contenedor */
-    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
     padding: 10px;
 }
 
 .image-container img {
-    width: 18%; /* Ajusta el tamaño de las imágenes */
+    width: 20%;
     height: auto;
-    max-width: 200px; /* Para evitar imágenes demasiado grandes */
+    max-width: 250px;
+    transition: transform 0.3s ease-in-out;
 }
-.main-imagen-large {
-    width: 100vw; /* Ocupa todo el ancho de la pantalla */
-    height: auto; /* Mantiene la proporción */
-    display: block; /* Evita espacios en blanco debajo */
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* TÍTULOS */
+h1, h2 {
+    font-family: 'Lora', serif;
 }
 
 h1 {
     position: absolute;
-    top: 3%; /* Adjusts the title position */
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 95, 115, 0.7);
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 1rem;
     border-radius: 10px;
-    font-size: 2.5rem; /* Font size */
+    font-size: 2.5rem;
     width: 40%;
-    font-family: 'Lora', serif;
 }
 
-article {
-    position: absolute; /* Allows the article to be positioned relative to its parent */
-    display: flex; /* Enables flexbox for content alignment */
-    align-items: center; /* Centers content vertically */
-    justify-content: center; /* Centers content horizontally */
-    padding: 1rem; /* Internal spacing around the content */
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    margin-top: -250px; /* Adjusts the article's vertical position */
-    left: 50%; /* Centers horizontally */
-    transform: translateX(-50%); /* Adjusts horizontal positioning */
-
-    max-width: 50%; /* Limits the maximum width of the article */
-    width: auto; /* Defines the width of the article */
-    margin-right: 1rem; /* Space to the right of the article */
-    border-radius: 10px; /* Rounded corners */
-    flex-direction: row-reverse;
-    
-}
-
-article img {
-    width: 90%; /* Adjusts the image size */
-    max-width: 250px; /* Limits the maximum width */
-    height: auto; /* Maintains aspect ratio */
-}
-
-article p {
-    font-size: 1.5rem;
-    width: auto; /* Se ajusta automáticamente */
+h2 {
+    font-size: 50px;
     text-align: center;
-    flex-grow: 1; /* Permite que el texto use el espacio disponible */
-    padding: 0.5rem; /* Se adapta al padding del article */
-}
-.history-section h2 {
-    margin-bottom: 15px; /* Espaciado debajo del título */
+    margin-bottom: 15px;
 }
 
+/* SECCIÓN HISTORIA */
 .history-section {
     padding: 20px;
     text-align: center;
@@ -124,72 +108,70 @@ article p {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Permite mejor adaptabilidad en pantallas pequeñas */
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-
 .history-content img {
-    width: 300px; /* Ajusta el tamaño de la imagen */
-    height: auto; /* Mantiene la proporción */
+    width: 300px;
+    height: auto;
 }
 
 .history-content p {
-    width: 30%; /* Limita el ancho del texto para que no se expanda demasiado */
-    text-align: justify; /* Justifica el texto */
+    width: 30%;
+    text-align: justify;
     font-size: 23px;
 }
-h2 {
-    font-size: 50px;
-    font-family: 'Lora', serif;
+
+/* ARTICLE */
+article {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 50%;
+    border-radius: 10px;
+    flex-direction: row-reverse;
 }
 
+article img {
+    width: 90%;
+    max-width: 250px;
+    height: auto;
+}
+
+article p {
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    padding: 0.5rem;
+}
+
+/* SECCIÓN AVENTURA */
 .adventura-gallery {
     display: flex;
-    flex-direction: column; /* Acomoda los elementos en columna */
-    align-items: center; /* Centra el título y las imágenes */
-    text-align: center; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     width: 100%;
-}
-
-.adventura-gallery img {
-    width: 20%; /* Ajusta el tamaño para que entren en la fila */
-    height: auto; /* Mantiene la proporción */
 }
 
 .adventura-gallery h2 {
-    margin-bottom: 20px; /* Espacio entre el título y las imágenes */
-    width: 100%;
-    text-align: center;
-    font-size: 2rem; /* Ajusta el tamaño del título si es necesario */
+    margin-bottom: 20px;
+    font-size: 2rem;
 }
 
 .adventura-gallery img {
-    width: 18%; /* Ajusta el tamaño de las imágenes */
+    width: 18%;
     height: auto;
 }
-.image-container {
-    display: flex;
-    justify-content: center; /* Centra las imágenes */
-    align-items: center;
-    flex-wrap: wrap; /* Evita que las imágenes pasen a otra línea */
-    gap: 15px; /* Espacio entre imágenes */
-    width: 100%;
-    max-width: 100%; /* Ajusta el tamaño máximo del contenedor */
-    padding: 10px;
-    overflow: hidden;
-}
-.image-container img {
-    width: 20%; /* Aumenta el tamaño de las imágenes */
-    height: auto;
-    max-width: 250px; /* Permite agrandarlas sin que sean demasiado grandes */
-    transition: transform 0.3s ease-in-out; /* Agrega una animación suave */
-}
-.image-container img:hover {
-    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
-}
 
-
+/* FOOTER */
 footer {
     text-align: center;
     padding: 1rem;
