@@ -18,7 +18,7 @@ header {
     grid-template-columns: auto 1fr auto; /* Tres columnas bien distribuidas */
     align-items: center;
     background-color: var(--primary-color);
-    padding: 1rem;
+    padding: 0.5rem;
     gap: 2rem; /* Aumenta la separación entre elementos */
     margin-right: 200px;
     width: 100%;
@@ -42,11 +42,22 @@ main {
     padding-top: 0px;
 }
 
-.main-image-container  {
-    width: 100%; /* Ensures the large image occupies 100% of the width */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; /* Evita que las imágenes se vayan a otra línea */
+    gap: 15px; /* Espacio entre imágenes */
+    width: 100%;
+    max-width: 1200px; /* Controla el tamaño máximo del contenedor */
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    padding: 10px;
+}
+
+.image-container img {
+    width: 18%; /* Ajusta el tamaño de las imágenes */
     height: auto;
-    display: block;
-    overflow: hidden;
+    max-width: 200px; /* Para evitar imágenes demasiado grandes */
 }
 .main-imagen-large {
     width: 100vw; /* Ocupa todo el ancho de la pantalla */
@@ -63,7 +74,7 @@ h1 {
     color: rgb(255, 255, 255);
     padding: 1rem;
     border-radius: 10px;
-    font-size: 2.5rem; /* Font size */
+    font-size: 3.5rem; /* Font size */
     width: 40%;
     font-family: 'Lora', serif;
 }
@@ -73,14 +84,14 @@ article {
     display: flex; /* Enables flexbox for content alignment */
     align-items: center; /* Centers content vertically */
     justify-content: center; /* Centers content horizontally */
-    padding: 0.5rem; /* Internal spacing around the content */
+    padding: 1rem; /* Internal spacing around the content */
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    margin-top: -150px; /* Adjusts the article's vertical position */
+    margin-top: -250px; /* Adjusts the article's vertical position */
     left: 50%; /* Centers horizontally */
     transform: translateX(-50%); /* Adjusts horizontal positioning */
 
     max-width: 50%; /* Limits the maximum width of the article */
-    width: 30%; /* Defines the width of the article */
+    width: auto; /* Defines the width of the article */
     margin-right: 1rem; /* Space to the right of the article */
     border-radius: 10px; /* Rounded corners */
     flex-direction: row-reverse;
@@ -89,14 +100,16 @@ article {
 
 article img {
     width: 90%; /* Adjusts the image size */
-    max-width: 150px; /* Limits the maximum width */
+    max-width: 350px; /* Limits the maximum width */
     height: auto; /* Maintains aspect ratio */
 }
 
 article p {
-    font-size: 1rem; /* Reduces text size */
-    width: 90%;
-    text-align: center; /* Ensures text is centered */
+    font-size: 1.5rem;
+    width: auto; /* Se ajusta automáticamente */
+    text-align: center;
+    flex-grow: 1; /* Permite que el texto use el espacio disponible */
+    padding: 0.5rem; /* Se adapta al padding del article */
 }
 .history-section h2 {
     margin-bottom: 15px; /* Espaciado debajo del título */
@@ -131,28 +144,50 @@ h2 {
     font-family: 'Lora', serif;
 }
 
-.adventure-gallery {
+.adventura-gallery {
     display: flex;
-    width: 100vw; /* Ocupará TODO el ancho de la pantalla */
-    overflow: hidden; /* Evita desbordamientos */
-    margin: 0;
-    padding: 0;
-    gap: 0; /* Elimina cualquier separación extra */
+    flex-direction: column; /* Acomoda los elementos en columna */
+    align-items: center; /* Centra el título y las imágenes */
+    text-align: center; 
+    width: 100%;
 }
 
+.adventura-gallery img {
+    width: 20%; /* Ajusta el tamaño para que entren en la fila */
+    height: auto; /* Mantiene la proporción */
+}
 
-.adventure-gallery img {
-    flex: 1;
-    width: 20%; /* Reducido de 20% a 19% para evitar que una imagen baje */
-    max-width: 20%;
+.adventura-gallery h2 {
+    margin-bottom: 20px; /* Espacio entre el título y las imágenes */
+    width: 100%;
+    text-align: center;
+    font-size: 2rem; /* Ajusta el tamaño del título si es necesario */
+}
+
+.adventura-gallery img {
+    width: 18%; /* Ajusta el tamaño de las imágenes */
     height: auto;
-    object-fit: cover;
-    display: block;
-    margin: 0;
-    padding: 0;
 }
-
-
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra las imágenes */
+    align-items: center;
+    flex-wrap: wrap; /* Evita que las imágenes pasen a otra línea */
+    gap: 15px; /* Espacio entre imágenes */
+    width: 100%;
+    max-width: 100%; /* Ajusta el tamaño máximo del contenedor */
+    padding: 10px;
+    overflow: hidden;
+}
+.image-container img {
+    width: 20%; /* Aumenta el tamaño de las imágenes */
+    height: auto;
+    max-width: 500px; /* Permite agrandarlas sin que sean demasiado grandes */
+    transition: transform 0.3s ease-in-out; /* Agrega una animación suave */
+}
+.image-container img:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el mouse */
+}
 
 
 footer {
