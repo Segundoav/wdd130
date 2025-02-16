@@ -25,7 +25,7 @@ header {
 }
 
 header img {
-    width: 150px;
+    width: 120px;
     margin-left: 200px;
 }
 
@@ -33,7 +33,7 @@ nav a {
     color: black;
     text-decoration: none;
     margin: 1rem;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 main {
@@ -74,7 +74,7 @@ h1 {
     color: rgb(255, 255, 255);
     padding: 1rem;
     border-radius: 10px;
-    font-size: 3.5rem; /* Font size */
+    font-size: 2.5rem; /* Font size */
     width: 40%;
     font-family: 'Lora', serif;
 }
@@ -182,7 +182,7 @@ h2 {
 .image-container img {
     width: 20%; /* Aumenta el tamaño de las imágenes */
     height: auto;
-    max-width: 500px; /* Permite agrandarlas sin que sean demasiado grandes */
+    max-width: 400px; /* Permite agrandarlas sin que sean demasiado grandes */
     transition: transform 0.3s ease-in-out; /* Agrega una animación suave */
 }
 .image-container img:hover {
