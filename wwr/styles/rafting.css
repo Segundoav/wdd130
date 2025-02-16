@@ -100,7 +100,7 @@ article {
 
 article img {
     width: 90%; /* Adjusts the image size */
-    max-width: 350px; /* Limits the maximum width */
+    max-width: 250px; /* Limits the maximum width */
     height: auto; /* Maintains aspect ratio */
 }
 
@@ -130,7 +130,7 @@ article p {
 
 
 .history-content img {
-    width: 400px; /* Ajusta el tamaño de la imagen */
+    width: 300px; /* Ajusta el tamaño de la imagen */
     height: auto; /* Mantiene la proporción */
 }
 
@@ -182,7 +182,7 @@ h2 {
 .image-container img {
     width: 20%; /* Aumenta el tamaño de las imágenes */
     height: auto;
-    max-width: 300px; /* Permite agrandarlas sin que sean demasiado grandes */
+    max-width: 250px; /* Permite agrandarlas sin que sean demasiado grandes */
     transition: transform 0.3s ease-in-out; /* Agrega una animación suave */
 }
 .image-container img:hover {
