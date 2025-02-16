@@ -75,7 +75,7 @@ article {
     justify-content: center; /* Centers content horizontally */
     padding: 0.5rem; /* Internal spacing around the content */
     background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    margin-top: -500px; /* Adjusts the article's vertical position */
+    margin-top: -150px; /* Adjusts the article's vertical position */
     left: 50%; /* Centers horizontally */
     transform: translateX(-50%); /* Adjusts horizontal positioning */
 
