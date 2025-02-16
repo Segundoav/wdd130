@@ -182,7 +182,7 @@ h2 {
 .image-container img {
     width: 20%; /* Aumenta el tamaño de las imágenes */
     height: auto;
-    max-width: 400px; /* Permite agrandarlas sin que sean demasiado grandes */
+    max-width: 300px; /* Permite agrandarlas sin que sean demasiado grandes */
     transition: transform 0.3s ease-in-out; /* Agrega una animación suave */
 }
 .image-container img:hover {
