@@ -171,6 +171,81 @@ article p {
     height: auto;
 }
 
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.employee {
+    text-align: center;
+}
+
+.employee img {
+    width: 200px; /* Tamaño fijo para todas las imágenes */
+    height: 250px; /* Mantiene uniformidad en la altura */
+    object-fit: cover; /* Recorta la imagen para que se ajuste sin deformarse */
+    border-radius: 10px;
+}
+
+
+.contact-form {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    font-size: 18px; /* Agranda el texto en general */
+}
+
+.contact-form h2 {
+    font-size: 40px; /* Agranda el título */
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px; /* Agranda los casilleros */
+    font-size: 16px; /* Agranda el texto dentro de los casilleros */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.contact-form fieldset {
+    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 38px; /* Agranda el texto del botón */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
 /* FOOTER */
 footer {
     text-align: center;
